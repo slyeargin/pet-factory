@@ -1,0 +1,21 @@
+extends ../shared/template
+
+block content
+  h1 Our Handcrafted, Artisanal Pets
+
+  #marketing Can't find what you were looking for?
+    a(href='/pets/new') Custom order your pet today.
+
+  #collection
+    each pet in pets
+      .pet
+        h2
+          a(href='/pets/#{pet._id}')= pet.name
+        img(class='petPhoto', src='/img/pets/' + pet.photo)
+        .meta
+          .species Species: #{pet.species}
+          .age  Age: #{pet.age}
+          .gender Gender: #{pet.gender}
+        .delete
+          form(action='/pets/#{pet._id}/delete', method='POST')
+            button Delete

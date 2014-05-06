@@ -1,0 +1,14 @@
+extends ../shared/template
+
+block content
+  h1= pet.name
+
+  #profile
+    .pet
+      img(class='petPhoto', src='/img/pets/' + pet.photo)
+      .meta #{pet.name} is a #{pet.gender} #{pet.species}.
+
+
+        //- .species Species: #{pet.species}
+        //- .age  Age: #{pet.age}
+        //- .gender Gender: #{pet.gender}

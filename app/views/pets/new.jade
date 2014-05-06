@@ -1,0 +1,21 @@
+extends ../shared/template
+
+block content
+  h1 Custom Order Your Pet
+
+  #marketing Crafted with care, to your specifications.  Your artisan pet is a few clicks away.
+
+  #controls
+    form(method='POST', action='/pets')
+      input(name='name', type='text', placeholder="Your pet's name")
+      input(name='age', type='number', placeholder="Your pet's age")
+      select(name='gender')
+        option Female
+        option Male
+      select(name='species')
+        option Dog
+        option Cat
+        option Sloth
+      button Create Your Pet
+
+  #collection

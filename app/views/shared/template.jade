@@ -5,7 +5,26 @@ html
     title= title
     link(href='/css/buttons.css', rel='stylesheet')
     link(href='/less/app.css', rel='stylesheet')
-  body
+    link(href='http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
+
+  body(style='background-image: url(/img/backgrounds/#{bg});')
+    header
+      nav
+        ul.fa-ul
+          li
+            i.fa-li.fa.fa-home
+            a(href='/') Home
+          li
+            a(href='/about') About
+          li
+            a(href='/pets') See Pets
+          li
+            a(href='/pets/new') Order
+          li
+            a(href='/contact') Contact
+      div#logo
+        img(src='/img/logo.png')
+
     block content
 
     script(src='/js/vendor/jquery-2.1.1.js')
